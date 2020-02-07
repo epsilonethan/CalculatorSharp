@@ -1,0 +1,42 @@
+﻿<Window x:Class="CalculatorSharp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CalculatorSharp"
+        mc:Ignorable="d"
+        Title="Calculator Sharp" Height="409" Width="473">
+    <Grid>
+        <Button x:Name="Num7" Content="7" HorizontalAlignment="Left" Margin="75,147,0,0" VerticalAlignment="Top" Width="50" Height="37" Click="Num7_Click"/>
+        <Button x:Name="Num8" Content="8" HorizontalAlignment="Left" Margin="150,147,0,0" VerticalAlignment="Top" Width="50" Height="37" Click="Num8_Click"/>
+        <Button x:Name="Num9" Content="9" HorizontalAlignment="Left" Margin="225,147,0,0" VerticalAlignment="Top" Width="50" Height="37" Click="Num9_Click"/>
+        <Button x:Name="Num4" Content="4" HorizontalAlignment="Left" Margin="75,197,0,0" VerticalAlignment="Top" Width="50" Height="37" Click="Num4_Click"/>
+        <Button x:Name="Num5" Content="5" HorizontalAlignment="Left" Margin="150,197,0,0" VerticalAlignment="Top" Width="50" Height="37" Click="Num5_Click"/>
+        <Button x:Name="Num6" Content="6" HorizontalAlignment="Left" Margin="225,197,0,0" VerticalAlignment="Top" Width="50" Height="37" Click="Num6_Click"/>
+        <Button x:Name="Num1" Content="1" HorizontalAlignment="Left" Margin="75,242,0,0" VerticalAlignment="Top" Width="50" Height="37" Click="Num1_Click"/>
+        <Button x:Name="Num2" Content="2" HorizontalAlignment="Left" Margin="150,242,0,0" VerticalAlignment="Top" Width="50" Height="37" Click="Num2_Click"/>
+        <Button x:Name="Num3" Content="3" HorizontalAlignment="Left" Margin="225,242,0,0" VerticalAlignment="Top" Width="50" Height="37" Click="Num3_Click"/>
+        <Button x:Name="Decimal" Content="." HorizontalAlignment="Left" Margin="75,289,0,0" VerticalAlignment="Top" Width="50" Height="37" Click="Decimal_Click"/>
+        <Button x:Name="Num0" Content="0" HorizontalAlignment="Left" Margin="150,289,0,0" VerticalAlignment="Top" Width="50" Height="37" Click="Num0_Click"/>
+        <Button x:Name="Enter" Content="Enter" HorizontalAlignment="Left" Margin="225,289,0,0" VerticalAlignment="Top" Width="50" Height="37" Click="Enter_Click"/>
+        <Button x:Name="divide" Content="/" HorizontalAlignment="Left" Margin="292,147,0,0" VerticalAlignment="Top" Width="50" Height="37" Click="divide_Click"/>
+        <Button x:Name="mult" Content="*" HorizontalAlignment="Left" Margin="292,197,0,0" VerticalAlignment="Top" Width="50" Height="37" Click="mult_Click"/>
+        <Button x:Name="addb" Content="+" HorizontalAlignment="Left" Margin="292,242,0,0" VerticalAlignment="Top" Width="50" Height="37" Click="addb_Click"/>
+        <Button x:Name="subb" Content="-" HorizontalAlignment="Left" Margin="292,289,0,0" VerticalAlignment="Top" Width="50" Height="37" Click="subb_Click"/>
+        <Button x:Name="clearb" Content="clear" HorizontalAlignment="Left" Margin="360,150,0,0" VerticalAlignment="Top" Width="50" Height="175" Click="clearb_Click"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="75,28,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="335" Height="61"/>
+        <DockPanel LastChildFill="False" DockPanel.Dock ="Top">
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_File" Click="MenuItem_Click">
+                    <MenuItem Header="_New"/>
+                    <MenuItem Header="_Open"/>
+                    <MenuItem Header="_Save"/>
+                    <Separator/>
+                    <MenuItem Header="_Exit"/>
+                </MenuItem>
+            </Menu>
+
+        </DockPanel>
+
+    </Grid>
+</Window>
