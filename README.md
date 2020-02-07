@@ -1,2 +1,2 @@
 # CalculatorSharp
-Simple windows calculator made with C#
+Simple Windows calculator made with C#
