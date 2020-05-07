@@ -192,5 +192,11 @@ namespace CalculatorSharp
             this.operand1 = string.Empty;
             this.operand2 = string.Empty;
         }
+
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
