@@ -198,5 +198,10 @@ namespace CalculatorSharp
         {
             throw new NotImplementedException();
         }
+
+        private void Negate_Click(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
