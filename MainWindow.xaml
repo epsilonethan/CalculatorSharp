@@ -5,26 +5,57 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CalculatorSharp"
         mc:Ignorable="d"
-        Title="Calculator Sharp" Height="409" Width="473">
+        Title="Calculator Sharp" Height="409" Width="400">
     <Grid>
-        <Button x:Name="Num7" Content="7" HorizontalAlignment="Left" Margin="75,147,0,0" VerticalAlignment="Top" Width="50" Height="37" Click="Num7_Click"/>
-        <Button x:Name="Num8" Content="8" HorizontalAlignment="Left" Margin="150,147,0,0" VerticalAlignment="Top" Width="50" Height="37" Click="Num8_Click"/>
-        <Button x:Name="Num9" Content="9" HorizontalAlignment="Left" Margin="225,147,0,0" VerticalAlignment="Top" Width="50" Height="37" Click="Num9_Click"/>
-        <Button x:Name="Num4" Content="4" HorizontalAlignment="Left" Margin="75,197,0,0" VerticalAlignment="Top" Width="50" Height="37" Click="Num4_Click"/>
-        <Button x:Name="Num5" Content="5" HorizontalAlignment="Left" Margin="150,197,0,0" VerticalAlignment="Top" Width="50" Height="37" Click="Num5_Click"/>
-        <Button x:Name="Num6" Content="6" HorizontalAlignment="Left" Margin="225,197,0,0" VerticalAlignment="Top" Width="50" Height="37" Click="Num6_Click"/>
-        <Button x:Name="Num1" Content="1" HorizontalAlignment="Left" Margin="75,242,0,0" VerticalAlignment="Top" Width="50" Height="37" Click="Num1_Click"/>
-        <Button x:Name="Num2" Content="2" HorizontalAlignment="Left" Margin="150,242,0,0" VerticalAlignment="Top" Width="50" Height="37" Click="Num2_Click"/>
-        <Button x:Name="Num3" Content="3" HorizontalAlignment="Left" Margin="225,242,0,0" VerticalAlignment="Top" Width="50" Height="37" Click="Num3_Click"/>
-        <Button x:Name="Decimal" Content="." HorizontalAlignment="Left" Margin="75,289,0,0" VerticalAlignment="Top" Width="50" Height="37" Click="Decimal_Click"/>
-        <Button x:Name="Num0" Content="0" HorizontalAlignment="Left" Margin="150,289,0,0" VerticalAlignment="Top" Width="50" Height="37" Click="Num0_Click"/>
-        <Button x:Name="Enter" Content="Enter" HorizontalAlignment="Left" Margin="225,289,0,0" VerticalAlignment="Top" Width="50" Height="37" Click="Enter_Click"/>
-        <Button x:Name="divide" Content="/" HorizontalAlignment="Left" Margin="292,147,0,0" VerticalAlignment="Top" Width="50" Height="37" Click="divide_Click"/>
-        <Button x:Name="mult" Content="*" HorizontalAlignment="Left" Margin="292,197,0,0" VerticalAlignment="Top" Width="50" Height="37" Click="mult_Click"/>
-        <Button x:Name="addb" Content="+" HorizontalAlignment="Left" Margin="292,242,0,0" VerticalAlignment="Top" Width="50" Height="37" Click="addb_Click"/>
-        <Button x:Name="subb" Content="-" HorizontalAlignment="Left" Margin="292,289,0,0" VerticalAlignment="Top" Width="50" Height="37" Click="subb_Click"/>
-        <Button x:Name="clearb" Content="clear" HorizontalAlignment="Left" Margin="360,150,0,0" VerticalAlignment="Top" Width="50" Height="175" Click="clearb_Click"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="75,28,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="335" Height="61"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition/>      
+            <ColumnDefinition  Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+            <RowDefinition Height="10"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        
+        <Button x:Name="Negate" Content="+/-" Grid.Column="1" Grid.Row="7" Click="Negate_Click" />
+        <Button x:Name="Num0" Content="0" Grid.Column="2" Grid.Row="7" Click="Num0_Click"/>
+        <Button x:Name="Decimal" Content="," Grid.Column="3" Grid.Row="7"  Click="Decimal_Click"/>
+
+        <Button x:Name="Num1" Content="1" Grid.Column="1" Grid.Row="6" Click="Num1_Click"/>
+        <Button x:Name="Num2" Content="2" Grid.Column="2" Grid.Row="6"  Click="Num2_Click"/>
+        <Button x:Name="Num3" Content="3" Grid.Column="3" Grid.Row="6"  Click="Num3_Click"/>
+        <Button x:Name="Num4" Content="4" Grid.Column="1" Grid.Row="5" Click="Num4_Click"/>
+        <Button x:Name="Num5" Content="5" Grid.Column="2" Grid.Row="5"  Click="Num5_Click"/>
+        <Button x:Name="Num6" Content="6" Grid.Column="3" Grid.Row="5"  Click="Num6_Click"/>
+        <Button Grid.Column="1" Grid.Row="4" x:Name="Num7" Content="7"  Click="Num7_Click"/>
+        <Button Grid.Column="2" Grid.Row="4"  x:Name="Num8" Content="8"  Click="Num8_Click"/>
+        <Button x:Name="Num9" Content="9" Grid.Column="3" Grid.Row="4"  Click="Num9_Click"/>
+
+
+
+
+
+        <Button x:Name="Enter" Content="="  Click="Enter_Click" Grid.Column="5" Grid.Row="7"/>
+        <Button x:Name="addb" Content="+" Grid.Column="5" Grid.Row="6" Click="addb_Click"/>
+        <Button x:Name="subb" Content="-" Grid.Column="5" Grid.Row="5"  Click="subb_Click"/>
+        <Button x:Name="mult" Content="x" Grid.Column="5" Grid.Row="4" Click="mult_Click"/>
+        <Button x:Name="divide" Content="/"  Grid.Column="5" Grid.Row="3" Click="divide_Click"/>
+        <Button x:Name="clearb" Content="C"  Grid.Column="3" Grid.Row="3" Click="clearb_Click"/>
+
+        <TextBox x:Name="textBox" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="5" Background="LightGray"  Text=""/>
+        
+        
         <DockPanel LastChildFill="False" DockPanel.Dock ="Top">
             <Menu DockPanel.Dock="Top"  Visibility="Hidden">
                 <MenuItem Header="_File" Click="MenuItem_Click">
